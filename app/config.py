@@ -4,6 +4,7 @@ Copy .env.example to .env and fill in your values before running.
 """
 
 import os
+import secrets as _secrets
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -47,6 +48,11 @@ class Settings:
 
     # PDF pages with fewer characters than this threshold trigger OCR fallback
     OCR_FALLBACK_THRESHOLD: int = int(os.getenv("OCR_FALLBACK_THRESHOLD", "50"))
+
+    # ── Dashboard / Auth ─────────────────────────────────────────────────────
+    SECRET_KEY: str = os.getenv("SECRET_KEY", _secrets.token_urlsafe(32))
+    DB_PATH: str = os.getenv("DB_PATH", "data/chatbot.db")
+    LOGS_DIR: str = os.getenv("LOGS_DIR", "logs")
 
 
 settings = Settings()

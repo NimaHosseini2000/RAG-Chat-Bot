@@ -1,0 +1,27 @@
+# ── Document reading ──────────────────────────────────────────────────────────
+pymupdf>=1.24.0          # PDF native text extraction (import fitz)
+python-docx>=1.1.0       # Word document reading
+pdf2image>=1.17.0        # PDF → PIL images for OCR fallback
+pytesseract>=0.3.10      # Tesseract OCR wrapper
+Pillow>=10.0.0           # Image processing
+
+# ── Embedding ─────────────────────────────────────────────────────────────────
+sentence-transformers>=3.0.0   # Multilingual embeddings (Persian support)
+
+# ── Vector store ──────────────────────────────────────────────────────────────
+qdrant-client>=1.9.0
+
+# ── LLM ───────────────────────────────────────────────────────────────────────
+openai>=1.40.0
+
+# ── API server ────────────────────────────────────────────────────────────────
+fastapi>=0.111.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.7.0
+python-multipart>=0.0.9   # required by FastAPI for file uploads
+
+# ── Config ────────────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0
+
+# ── Auth / Dashboard ──────────────────────────────────────────────────────────
+bcrypt>=4.0.0
