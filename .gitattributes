@@ -1,0 +1,7 @@
+# Ignore frontend files from GitHub language stats
+*.html linguist-vendored
+*.css linguist-vendored
+*.js linguist-vendored
+
+# Or explicitly mark Python as detectable
+*.py linguist-detectable=true
